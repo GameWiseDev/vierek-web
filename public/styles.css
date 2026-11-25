@@ -69,7 +69,7 @@ h3 { font-size: 22px; line-height: 1.25; }
 }
 .btn:hover { color: var(--ink); }
 .btn--primary { background: var(--blue); }
-.btn--primary:hover { background: var(--blue-hover); }
+.btn--primary:hover { background: var(--blue-hover); color: var(--ink); }
 .btn--secondary { background: var(--card); border-color: var(--line-2); }
 .btn--secondary:hover { border-color: var(--ink-3); }
 .btn--ghost { border-color: var(--line-2); }
