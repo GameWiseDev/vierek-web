@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="{{html_lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}">
+  <meta name="theme-color" content="#0B0F24">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="canonical" href="{{page_url}}">
+{{hreflang_links}}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{og_title}}">
+  <meta property="og:description" content="{{og_description}}">
+  <meta property="og:image" content="{{site_url}}/assets/og-{{lang}}.png">
+  <meta property="og:url" content="{{page_url}}">
+  <meta property="og:locale" content="{{og_locale}}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="/assets/fonts/exo-2-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Íconos: Font Awesome Free (CC BY 4.0), decorativos; siempre van con texto al lado -->
+{{icon_sprite}}
+
+  <a class="skip" href="#contenido">{{skip}}</a>
+
+  <!-- ===== Barra superior ===== -->
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="/{{lang}}/" aria-label="{{brand_home}}">
+        <img src="/assets/logos/vierek-horizontal-color-oscuro.svg" alt="VIEREK S.A.S." width="176" height="20">
+      </a>
+      <nav class="nav" aria-label="{{nav_label}}">
+        <a href="#que-hacemos">{{nav_what}}</a>
+        <a href="#productos">{{nav_products}}</a>
+        <a href="#inversores">{{nav_investors}}</a>
+        <a href="#equipo">{{nav_team}}</a>
+      </nav>
+      <div class="lang" role="group" aria-label="{{lang_label}}">
+{{lang_links}}
+      </div>
+      <a class="btn btn--primary btn--sm topbar__cta" data-cta="nav-agendar" href="{{mail_meeting}}">{{cta_meeting_short}}</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <!-- Motivo: los planos de la V del isotipo, grandes y recortados -->
+      <svg class="hero__v" viewBox="0 0 200 170" aria-hidden="true" focusable="false">
+        <polygon class="v-a" points="0,0 56,0 128,170 72,170"/>
+        <polygon class="v-b" points="98.3,108 154.3,108 128,170 72,170"/>
+        <polygon class="v-c" points="144,0 200,0 162.7,88 106.7,88"/>
+      </svg>
+      <div class="wrap hero__inner">
+        <h1>{{hero_title}}</h1>
+        <p class="lead">{{hero_lead}}</p>
+        <div class="actions">
+          <a class="btn btn--primary btn--lg" data-cta="hero-inversores" href="#inversores">{{cta_investor}} <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost btn--lg" data-cta="hero-productos" href="#productos">{{cta_products}}</a>
+        </div>
+        <ul class="facts">
+          <li><svg aria-hidden="true"><use href="#i-gamepad"/></svg>{{fact1}}</li>
+          <li><svg aria-hidden="true"><use href="#i-trophy"/></svg>{{fact2}}</li>
+          <li><svg aria-hidden="true"><use href="#i-users"/></svg>{{fact3}}</li>
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg>{{fact4}}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Qué hacemos ===== -->
+    <section class="section" id="que-hacemos" aria-labelledby="hacemos-titulo">
+      <div class="wrap split">
+        <div class="split__head">
+          <h2 id="hacemos-titulo">{{what_title}}</h2>
+          <p class="lead">{{what_lead}}</p>
+          <a class="link" data-cta="hacemos-contacto" href="{{mail_project}}">{{what_cta}} <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="areas">
+          <li><svg aria-hidden="true"><use href="#i-code"/></svg><div><h3>{{area1_t}}</h3><p>{{area1_d}}</p></div></li>
+          <li><svg aria-hidden="true"><use href="#i-mobile"/></svg><div><h3>{{area2_t}}</h3><p>{{area2_d}}</p></div></li>
+          <li><svg aria-hidden="true"><use href="#i-gamepad"/></svg><div><h3>{{area3_t}}</h3><p>{{area3_d}}</p></div></li>
+          <li><svg aria-hidden="true"><use href="#i-chip"/></svg><div><h3>{{area4_t}}</h3><p>{{area4_d}}</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Productos ===== -->
+    <section class="section" id="productos" aria-labelledby="productos-titulo">
+      <div class="wrap">
+        <h2 id="productos-titulo">{{products_title}}</h2>
+        <article class="product">
+          <div class="product__main">
+            <p class="product__status"><span class="dot" aria-hidden="true"></span>{{gw_status}}</p>
+            <h3 class="product__name">GAMEWISE</h3>
+            <p class="product__tag">{{gw_tag}}</p>
+            <p class="product__text">{{gw_text}}</p>
+            <a class="btn btn--secondary" data-cta="productos-gamewise" href="https://gamewise.vierek.com.ar/" rel="noopener">{{gw_link}} <svg aria-hidden="true"><use href="#i-external"/></svg></a>
+          </div>
+          <dl class="product__facts">
+            <div><dt>{{gw_f1_t}}</dt><dd>{{gw_f1_d}}</dd></div>
+            <div><dt>{{gw_f2_t}}</dt><dd>{{gw_f2_d}}</dd></div>
+            <div><dt>{{gw_f3_t}}</dt><dd>{{gw_f3_d}}</dd></div>
+            <div><dt>{{gw_f4_t}}</dt><dd>{{gw_f4_d}}</dd></div>
+          </dl>
+        </article>
+        <p class="next-product"><b>{{next_t}}</b> {{next_d}}</p>
+      </div>
+    </section>
+
+    <!-- ===== Inversores ===== -->
+    <section class="section band" id="inversores" aria-labelledby="inv-titulo">
+      <svg class="band__v" viewBox="0 0 200 170" aria-hidden="true" focusable="false">
+        <polygon points="0,0 56,0 128,170 72,170"/>
+        <polygon points="144,0 200,0 162.7,88 106.7,88"/>
+      </svg>
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="inv-titulo">{{inv_title}}</h2>
+          <p class="lead">{{inv_lead}}</p>
+        </div>
+
+        <div class="why">
+          <div><h3>{{why1_t}}</h3><p>{{why1_d}}</p></div>
+          <div><h3>{{why2_t}}</h3><p>{{why2_d}}</p></div>
+          <div><h3>{{why3_t}}</h3><p>{{why3_d}}</p></div>
+        </div>
+
+        <h3 class="sub">{{road_title}}</h3>
+        <ol class="road">
+          <li class="is-now"><span class="road__when">{{road1_w}}</span><span class="road__what">{{road1_d}}</span></li>
+          <li><span class="road__when">{{road2_w}}</span><span class="road__what">{{road2_d}}</span></li>
+          <li><span class="road__when">{{road3_w}}</span><span class="road__what">{{road3_d}}</span></li>
+          <li><span class="road__when">{{road4_w}}</span><span class="road__what">{{road4_d}}</span></li>
+          <li class="is-goal"><span class="road__when">{{road5_w}}</span><span class="road__what">{{road5_d}}</span></li>
+        </ol>
+
+        <div class="meet">
+          <div class="meet__steps">
+            <h3 class="sub">{{steps_title}}</h3>
+            <ol>
+              <li><svg aria-hidden="true"><use href="#i-calendar"/></svg><span><b>{{step1_t}}</b> {{step1_d}}</span></li>
+              <li><svg aria-hidden="true"><use href="#i-gamepad"/></svg><span><b>{{step2_t}}</b> {{step2_d}}</span></li>
+              <li><svg aria-hidden="true"><use href="#i-shield"/></svg><span><b>{{step3_t}}</b> {{step3_d}}</span></li>
+            </ol>
+          </div>
+          <div class="meet__card">
+            <div class="person">
+              <span class="person__avatar" aria-hidden="true">JP</span>
+              <div><p class="person__name">Jeremías Palacios</p><p class="person__role">{{ceo_role}}</p></div>
+            </div>
+            <p>{{meet_text}}</p>
+            <a class="btn btn--primary btn--lg" data-cta="inversores-agendar" href="{{mail_meeting}}"><svg aria-hidden="true"><use href="#i-mail"/></svg> {{cta_meeting}}</a>
+            <small>{{meet_small}}</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Equipo ===== -->
+    <section class="section" id="equipo" aria-labelledby="equipo-titulo">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="equipo-titulo">{{team_title}}</h2>
+          <p class="lead">{{team_lead}}</p>
+        </div>
+        <ul class="team">
+          <li><h3>Jeremías Palacios</h3><p class="team__role">CEO</p><p>{{team1}}</p></li>
+          <li><h3>Pablo Arismendi</h3><p class="team__role">CTO</p><p>{{team2}}</p></li>
+          <li><h3>Tamara Sosa</h3><p class="team__role">Head of Product</p><p>{{team3}}</p></li>
+          <li><h3>Valeria Colque</h3><p class="team__role">Head of Growth</p><p>{{team4}}</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="wrap contact__inner">
+        <h2 id="contacto-titulo">{{contact_title}}</h2>
+        <p class="lead">{{contact_lead}}</p>
+        <a class="contact__mail" data-cta="contacto-mail" href="mailto:jpalacios@vierek.com.ar">jpalacios@vierek.com.ar</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pie ===== -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <img src="/assets/logos/vierek-horizontal-color-oscuro.svg" alt="VIEREK S.A.S." width="158" height="18">
+      <p>{{footer_company}}</p>
+      <p>{{footer_gw}}</p>
+      <p>© <span id="year">2026</span> VIEREK</p>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
