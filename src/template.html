@@ -34,16 +34,20 @@
       <a class="brand" href="/{{lang}}/" aria-label="{{brand_home}}">
         <img src="/assets/logos/vierek-horizontal-color-oscuro.svg" alt="VIEREK S.A.S." width="176" height="20">
       </a>
-      <nav class="nav" aria-label="{{nav_label}}">
+      <nav class="nav" id="nav-secciones" aria-label="{{nav_label}}">
         <a href="#que-hacemos">{{nav_what}}</a>
         <a href="#productos">{{nav_products}}</a>
         <a href="#inversores">{{nav_investors}}</a>
         <a href="#equipo">{{nav_team}}</a>
+        <a class="btn btn--primary nav__cta" data-cta="menu-agendar" href="{{mail_meeting}}">{{cta_meeting}}</a>
       </nav>
       <div class="lang" role="group" aria-label="{{lang_label}}">
 {{lang_links}}
       </div>
-      <a class="btn btn--primary btn--sm topbar__cta" data-cta="nav-agendar" href="{{mail_meeting}}">{{cta_meeting_short}}</a>
+      <a class="btn btn--primary btn--sm topbar__cta" data-cta="nav-agendar" href="{{mail_meeting}}">{{cta_meeting}}</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-secciones" aria-label="{{menu_open}}" data-label-open="{{menu_open}}" data-label-close="{{menu_close}}">
+        <svg aria-hidden="true"><use href="#i-bars"/></svg>
+      </button>
     </div>
   </header>
 
@@ -99,14 +103,19 @@
             <h3 class="product__name">GAMEWISE</h3>
             <p class="product__tag">{{gw_tag}}</p>
             <p class="product__text">{{gw_text}}</p>
+
+            <dl class="product__facts">
+              <div><dt>{{gw_f1_t}}</dt><dd>{{gw_f1_d}}</dd></div>
+              <div><dt>{{gw_f2_t}}</dt><dd>{{gw_f2_d}}</dd></div>
+              <div><dt>{{gw_f3_t}}</dt><dd>{{gw_f3_d}}</dd></div>
+              <div><dt>{{gw_f4_t}}</dt><dd>{{gw_f4_d}}</dd></div>
+            </dl>
             <a class="btn btn--secondary" data-cta="productos-gamewise" href="https://gamewise.vierek.com.ar/" rel="noopener">{{gw_link}} <svg aria-hidden="true"><use href="#i-external"/></svg></a>
           </div>
-          <dl class="product__facts">
-            <div><dt>{{gw_f1_t}}</dt><dd>{{gw_f1_d}}</dd></div>
-            <div><dt>{{gw_f2_t}}</dt><dd>{{gw_f2_d}}</dd></div>
-            <div><dt>{{gw_f3_t}}</dt><dd>{{gw_f3_d}}</dd></div>
-            <div><dt>{{gw_f4_t}}</dt><dd>{{gw_f4_d}}</dd></div>
-          </dl>
+          <figure class="product__shot">
+            <img src="/assets/gamewise-diagnostico.webp" srcset="/assets/gamewise-diagnostico-1x.webp 1016w, /assets/gamewise-diagnostico.webp 2032w" sizes="(max-width: 860px) 92vw, 620px" width="2032" height="1320" decoding="async" alt="{{gw_shot_alt}}">
+            <figcaption>{{gw_shot_caption}}</figcaption>
+          </figure>
         </article>
         <p class="next-product"><b>{{next_t}}</b> {{next_d}}</p>
       </div>
@@ -182,7 +191,10 @@
       <div class="wrap contact__inner">
         <h2 id="contacto-titulo">{{contact_title}}</h2>
         <p class="lead">{{contact_lead}}</p>
-        <a class="contact__mail" data-cta="contacto-mail" href="mailto:jpalacios@vierek.com.ar">jpalacios@vierek.com.ar</a>
+        <div class="actions">
+          <a class="btn btn--primary btn--lg" data-cta="contacto-agendar" href="{{mail_meeting}}"><svg aria-hidden="true"><use href="#i-mail"/></svg> {{cta_meeting}}</a>
+        </div>
+        <p class="contact__alt">{{contact_alt}} <a data-cta="contacto-mail" href="mailto:jpalacios@vierek.com.ar">jpalacios@vierek.com.ar</a></p>
       </div>
     </section>
   </main>
@@ -198,6 +210,5 @@
   </footer>
 
   <script src="/main.js" defer></script>
-  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
