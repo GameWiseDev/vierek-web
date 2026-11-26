@@ -3,6 +3,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { createHash } from 'node:crypto';
 
 const SITE_URL = 'https://vierek.com.ar';
 const LANGS = ['es', 'en']; // el primero es el idioma por defecto
@@ -49,6 +50,12 @@ const iconSprite = [
   '  </svg>',
 ].join('\n');
 
+// Versión de estilos y JS según su contenido: si cambian, cambia la URL y ningún caché
+// (navegador o Cloudflare) puede servir el archivo viejo con la página nueva.
+const assetVersion = (file) => createHash('sha1').update(readFileSync(file)).digest('hex').slice(0, 10);
+const cssV = assetVersion('public/styles.css');
+const jsV = assetVersion('public/main.js');
+
 const used = new Set();
 for (const lang of LANGS) {
   const langLinks = LANGS.map((l) => {
@@ -72,8 +79,11 @@ for (const lang of LANGS) {
     return vars[key];
   });
 
+  const versioned = html
+    .replace('href="/styles.css"', `href="/styles.css?v=${cssV}"`)
+    .replace('src="/main.js"', `src="/main.js?v=${jsV}"`);
   mkdirSync(join(OUT, lang), { recursive: true });
-  writeFileSync(join(OUT, lang, 'index.html'), html);
+  writeFileSync(join(OUT, lang, 'index.html'), versioned);
 }
 
 // Claves que ningún texto usa (avisa, no corta el build). Las og_* se usan para la imagen de redes.
@@ -91,7 +101,7 @@ writeFileSync(join(OUT, 'index.html'), `<!DOCTYPE html>
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
 ${hreflangLinks}
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=${cssV}">
   <script src="/lang.js"></script>
 </head>
 <body class="fallback">
