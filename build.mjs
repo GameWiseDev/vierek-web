@@ -35,7 +35,7 @@ cpSync('public', OUT, { recursive: true });
 const ICONS = {
   arrow: 'arrow-right', external: 'arrow-up-right-from-square', mail: 'envelope', check: 'check',
   code: 'code', mobile: 'mobile-screen', gamepad: 'gamepad', chip: 'microchip', trophy: 'trophy',
-  users: 'users', bars: 'bars', calendar: 'calendar-check', shield: 'file-shield', globe: 'globe',
+  users: 'users', bars: 'bars', copy: 'copy', calendar: 'calendar-check', shield: 'file-shield', globe: 'globe',
 };
 const iconSprite = [
   '  <svg class="sprite" width="0" height="0" aria-hidden="true">',

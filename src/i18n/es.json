@@ -97,5 +97,10 @@
   "menu_close": "Cerrar menú",
   "gw_shot_alt": "Pantalla de diagnóstico de GAMEWISE: tres objetivos propuestos por el coach, con el valor actual y la meta, y los patrones que frenan al jugador, marcados como dato o interpretación.",
   "gw_shot_caption": "Captura de la app en modo demo, con datos de ejemplo.",
-  "contact_alt": "O escribinos directamente a"
+  "contact_alt": "O escribinos directamente a",
+  "mail_gmail": "https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jpalacios%40vierek.com.ar&amp;su=Reuni%C3%B3n%20con%20el%20CEO%20de%20VIEREK&amp;body=Hola%20Jerem%C3%ADas%2C%0A%0AMe%20interesa%20conocer%20m%C3%A1s%20sobre%20GAMEWISE%20y%20la%20ronda%20de%20inversi%C3%B3n.%0A%0ANombre%3A%0AFondo%20o%20empresa%3A%0AD%C3%ADas%20y%20horarios%20que%20me%20quedan%20bien%3A%0A%0AGracias.",
+  "webmail_hint": "¿Usás el correo en el navegador?",
+  "gmail": "Abrir en Gmail",
+  "copy": "Copiar dirección",
+  "copied": "Copiada"
 }

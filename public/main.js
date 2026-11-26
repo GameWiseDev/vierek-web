@@ -49,4 +49,20 @@ if ('IntersectionObserver' in window && navLinks.length) {
   document.querySelectorAll('main section[id]').forEach((s) => spy.observe(s));
 }
 
+// Copiar la dirección de mail (para quien usa el correo en el navegador)
+document.querySelectorAll('.copy').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const address = `${btn.dataset.user}@${btn.dataset.domain}`;
+    const label = btn.querySelector('span');
+    const original = label.textContent;
+    try {
+      await navigator.clipboard.writeText(address);
+      label.textContent = btn.dataset.copied;
+    } catch {
+      label.textContent = address;
+    }
+    setTimeout(() => { label.textContent = original; }, 2500);
+  });
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();

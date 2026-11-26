@@ -97,5 +97,10 @@
   "menu_close": "Close menu",
   "gw_shot_alt": "GAMEWISE diagnosis screen: three goals proposed by the coach, with the current value and the target, and the patterns holding the player back, labeled as data or interpretation.",
   "gw_shot_caption": "Screenshot of the app in demo mode, with sample data. The app is in Spanish for now.",
-  "contact_alt": "Or email us directly at"
+  "contact_alt": "Or email us directly at",
+  "mail_gmail": "https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jpalacios%40vierek.com.ar&amp;su=Meeting%20with%20the%20VIEREK%20CEO&amp;body=Hi%20Jerem%C3%ADas%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20GAMEWISE%20and%20the%20investment%20round.%0A%0AName%3A%0AFund%20or%20company%3A%0ADays%20and%20times%20that%20work%20for%20me%3A%0A%0AThanks.",
+  "webmail_hint": "Using email in your browser?",
+  "gmail": "Open in Gmail",
+  "copy": "Copy address",
+  "copied": "Copied"
 }

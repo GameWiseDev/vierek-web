@@ -252,3 +252,14 @@ h3 { font-size: 22px; line-height: 1.25; }
 
 /* El botón dentro del menú conserva el texto blanco del botón primario */
 .nav .nav__cta, .nav .nav__cta:hover { color: var(--ink); font-size: 15px; }
+
+/* Alternativas al botón de mail para quien usa el correo en el navegador */
+.webmail { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; margin: 14px 0 0; font-size: 14px; color: var(--ink-3); }
+.webmail a { font-weight: 600; }
+.copy {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 10px;
+  font: 600 14px/1 var(--text); color: var(--cyan); background: none;
+  border: 1px solid var(--line-2); border-radius: 6px; cursor: pointer;
+}
+.copy:hover { border-color: var(--cyan); }
+.copy svg { width: 13px; height: 13px; }
